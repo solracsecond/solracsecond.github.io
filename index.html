@@ -17,8 +17,12 @@
     </iframe>
     <script>
         window.addEventListener('load', function() { document.getElementById('WIX_ADS').style.display = 'none'; });
-        var element = document.getElementById("WIX_ADS");
-        element.parentNode.removeChild(element);
+        
+        let elements = document.querySelectorAll('[data-test-id=linkElement]');
+
+        for (let element of elements) {
+              element.style.display = "none";
+        }
     </script>
 </body>
 </html>
